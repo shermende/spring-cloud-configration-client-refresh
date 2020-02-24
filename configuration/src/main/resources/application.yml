@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: configuration
+  cloud:
+    config:
+      server:
+        git:
+          uri: .
+    stream:
+      bindings:
+        output:
+          destination: configurationRefresh
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+logging:
+  level:
+    dev.shermende: debug

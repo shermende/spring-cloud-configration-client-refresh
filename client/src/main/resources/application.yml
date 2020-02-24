@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: client
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: configurationRefresh
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+logging:
+  level:
+    dev.shermende: debug
