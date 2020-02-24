@@ -2,10 +2,6 @@ spring:
   application:
     name: configuration
   cloud:
-    config:
-      server:
-        git:
-          uri: .
     stream:
       bindings:
         output:

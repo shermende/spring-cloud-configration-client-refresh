@@ -17,7 +17,7 @@ public class SinkListener {
 
     @StreamListener(Sink.INPUT)
     public void input(Message<?> message) {
-        log.debug("[CONFIG] [REFRESH]");
+        log.debug("[CONFIG] [REFRESH] [{}]", message.getPayload());
         refreshEndpoint.refresh();
     }
 
